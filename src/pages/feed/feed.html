@@ -12,15 +12,14 @@
       <ion-avatar item-start>
         <img src="assets/images/avatar-blank.png">
       </ion-avatar>
-      <h2 class="feed_title">{{ nome_usuario }}</h2>
-      <p class="feed_date">Maio 13, 1982</p>
+      <h2 class="feed_title">{{ objeto_feed.titulo }}</h2>
+      <p class="feed_date">{{ objeto_feed.data }}</p>
     </ion-item>
 
     <img src="assets/images/prod.jpg">
 
   <ion-card-content>
-    <p>Estou voltando a fazer uma coisa que gosto muito!
-      ... Programar
+    <p>{{ objeto_feed.descricao }}
     </p>
   </ion-card-content>
 
@@ -28,18 +27,18 @@
     <ion-col>
       <button ion-button icon-left clear small>
         <ion-icon name="thumbs-up"></ion-icon>
-        <div>12 Likes</div>
+        <div>{{ objeto_feed.qntd_likes }} Likes</div>
       </button>
     </ion-col>
     <ion-col>
         <button ion-button icon-left clear small>
           <ion-icon name="text"></ion-icon>
-          <div>4 Commets</div>
+          <div> {{ objeto_feed.qntd_commets }} Commets</div>
         </button>
     </ion-col>
     <ion-col center text-center>
       <ion-note>
-        11h ago
+        {{ objeto_feed.time_commet }}
       </ion-note>
     </ion-col>
   </ion-row>
